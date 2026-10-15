@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>3M Car Care Studio - Quotation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<link rel="stylesheet" href="style.css"></head><body><div class="hero"><div class="in"><h1><b>3M</b> Car Care Studio</h1><p>Quotation maker · Aundh-Balewadi, Pune</p></div></div><div class="w">
+<div class="row tabs" style="margin-bottom:10px"><button id="t1" class="on">New quotation</button><button id="t2">Saved (<span id="cnt">0</span>)</button><span class="mu" id="st"></span></div>
+<div id="v1">
+<div class="card"><h3>Customer &amp; vehicle</h3><div class="g">
+<div><label>Customer name</label><input id="name"></div><div><label>Sir / Ma'am</label><select id="hon"><option value="auto">Auto (from name)</option><option value="Sir">Sir</option><option value="Ma'am">Ma'am</option></select></div><div><label>Phone (optional)</label><input id="phone" inputmode="tel"></div>
+<div><label>Address (optional)</label><input id="addr"></div><div><label>Car model</label><input id="model"></div>
+<div><label>Reg. number (optional)</label><input id="reg"></div><div><label>Date</label><input id="date" type="date"></div></div>
+<div class="row" style="margin-top:10px"><div><label>Segment</label><div class="row seg" id="seg"></div></div>
+<label style="display:flex;gap:6px;align-items:center;margin-left:auto"><input type="checkbox" id="inc" style="width:auto" checked> Price list rates include 18% GST</label>
+<label style="display:flex;gap:6px;align-items:center;flex-basis:100%;justify-content:flex-end"><input type="checkbox" id="stot" style="width:auto" checked> Show total amount on quotation</label></div></div>
+<div class="card"><h3>Treatments</h3><div class="row"><div class="pk"><label>Add treatment — search or tap to browse</label><input id="ps" placeholder="e.g. ceramic, wash, PPF…" autocomplete="off"><div id="pl" class="pl" hidden></div></div><button id="cust">+ Custom item</button></div></div>
+<div class="card tw" id="lc"><table><thead><tr><th>Description</th><th>Qty</th><th>Rate</th><th>Disc %</th><th class="r">Amount</th><th></th></tr></thead><tbody id="lines"></tbody></table>
+<div class="mu" id="empty">No items yet.</div></div>
+<div class="card"><h3>Offer &amp; remarks (optional)</h3><div class="g"><div><label>Offer</label><textarea id="offer" placeholder="e.g. Free interior wash with PPF"></textarea></div><div><label>Remarks</label><textarea id="remarks" placeholder="Notes for the customer"></textarea></div></div></div>
+</div>
+<div id="v2" hidden><div class="card"><input id="q" placeholder="Search name, phone, car, number"></div><div id="list"></div></div>
+</div>
+<div class="bar" id="bar"><div class="in"><div class="tot" id="sum"></div><button id="new">Clear</button><button id="save">Save</button><button id="savepdf" class="p">Save &amp; PDF</button></div></div>
+<script src="script.js"></script></body></html>
